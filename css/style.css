@@ -15,22 +15,12 @@
   
   width: 100%;
   height: 100%;
-  
-  
-}
-
-span{
-  
 }
 
 .photos-container .img-container img{
   object-fit: cover;
   width: 100%;
   height: 100%;
-  
-  
-  
-  
 }
 
 .photos-container .top-arrow, .photos-container .bottom-arrow{
@@ -43,7 +33,6 @@ span{
   cursor: pointer;
   color: black;
   transform: translateX(50%);
-
 }
 
 .photos-container .top-arrow{
