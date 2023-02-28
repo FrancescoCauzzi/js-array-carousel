@@ -20,16 +20,44 @@ const topArrowEl = document.querySelector('.top-arrow');
 const bottomArrowEl = document.querySelector('.bottom-arrow');
 const activeImgEl = document.getElementById("active-img");
 
-activeImgEl.src = images[index];
+let index = 0; 
+const maxArrImg = arrImg.length;
+activeImgEl.src = arrImg[index];
 
 // - memorizzare una variabile di indice
-const index = 0; 
 
-// -> alla pressione del pulsante "top"
-//   ° aumentare il valore dell'indice di un'unità
+
 
 topArrowEl.addEventListener('click', function(){
-  index++;
-  activeImgEl.src = images[index];
+  console.log('clicktop'); 
+  
+  if (index === maxArrImg - 1) {
+    index = 0;
+  } else {
+    // -> alla pressione del pulsante "top"
+    //   ° aumentare il valore dell'indice di un'unità
+    index++;
+  }
+  // aggiungi la classe active al cerchio relativo alla posizione dell'indice
+  activeImgEl.src = arrImg[index];
+  // console.log(index);
 
 })
+
+bottomArrowEl.addEventListener('click', function(){
+  console.log('clickbottom');
+  if (index === 0) {
+    index = maxArrImg - 1;
+  } else {
+    // -> alla pressione del pulsante "top"
+    //   ° ridurre il valore dell'indice di un'unità
+    index--;
+  }
+  // aggiungi la classe active al cerchio relativo alla posizione dell'indice
+  activeImgEl.src = arrImg[index];
+  // console.log(index);
+});
+
+
+
+
